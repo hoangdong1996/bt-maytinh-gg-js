@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập máy tính đơn giản</title>
+    <style>
+        button {
+            height: 40px;
+            width: 40px;
+            margin: 2px;
+        }
+        input {
+            width: 185px;
+            height: 40px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<input id="display" type="text">
+<br>
+<button onclick="getNumber(1)">1</button>
+<button onclick="getNumber(2)">2</button>
+<button onclick="getNumber(3)">3</button>
+<button onclick="getNumber('+')">+</button>
+<br>
+<button onclick="getNumber(4)">4</button>
+<button onclick="getNumber(5)">5</button>
+<button onclick="getNumber(6)">6</button>
+<button onclick="getNumber('-') ">-</button>
+<br>
+<button onclick="getNumber(7)">7</button>
+<button onclick="getNumber(8)">8</button>
+<button onclick="getNumber(9)">9</button>
+<button onclick="getNumber('*')">*</button>
+<br>
+<button onclick="clearValue()">C</button>
+<button onclick="getNumber(0)">0</button>
+<button onclick="caculation()">=</button>
+<button onclick="getNumber('/')">/</button>
+<script>
+    let display = document.getElementById("display");
+    function getNumber(value) {
+        display.value += value;
+    }
+    function caculation() {
+        let resutl = eval(display.value);
+        display.value = resutl;
+    }
+    function clearValue() {
+        display.value = "";
+        
+    }
+</script>
+</body>
+</html>
